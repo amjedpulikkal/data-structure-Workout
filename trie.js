@@ -4,8 +4,6 @@ class trieNode {
         this.isEnd = false
     }
 }
-
-
 class trie {
     constructor() {
         this.root = new trieNode()
