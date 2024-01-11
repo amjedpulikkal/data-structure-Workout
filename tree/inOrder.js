@@ -58,6 +58,11 @@ class TreeInOpre {
         }
 
     }
+    deleteNode(root, key) {
+
+        
+    }
+       
 }
 
 let tr = new TreeInOpre()
@@ -66,7 +71,7 @@ tr.insert(5)
 tr.insert(15)
 tr.insert(3)
 tr.insert(7)
-// tr.preOrder("/b",tr.root)
+tr.deleteNode(10)
 tr.inOrder(tr.root)
 console.log(tr.root)
 

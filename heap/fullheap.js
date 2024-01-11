@@ -33,7 +33,7 @@ class MinHeap {
 	}
 
 	// Functions to create Min Heap
-	
+
 	swap(indexOne, indexTwo) {
 		const temp = this.heap[indexOne];
 		this.heap[indexOne] = this.heap[indexTwo];
@@ -46,7 +46,7 @@ class MinHeap {
 		}
 		return this.heap[0];
 	}
-	
+
 	// Removing an element will remove the
 	// top element with highest priority then
 	// heapifyDown will be called 
@@ -89,14 +89,31 @@ class MinHeap {
 			index = smallerChildIndex;
 		}
 	}
-	
+
 	printHeap() {
-		var heap =` ${this.heap[0]} `
-		for(var i = 1; i<this.heap.length;i++) {
+		var heap = ` ${this.heap[0]} `
+		for (var i = 1; i < this.heap.length; i++) {
 			heap += ` ${this.heap[i]} `;
 		}
 		console.log(heap);
 	}
+
+	
+}
+
+
+function heapSort(arr) {
+	var sorted = [];
+	var heap1 = new MinHeap();
+
+	for (let i = 0; i < arr.length; i++) {
+		heap1.add(arr[i]);
+	}
+
+	for (let i = 0; i < arr.length; i++) {
+		sorted.push(heap1.remove());
+	}
+	return sorted;
 }
 
 // Creating the Heap
@@ -112,12 +129,16 @@ heap.add(100);
 heap.add(40);
 
 // Printing the Heap
-// heap.printHeap();
+heap.printHeap();
 
 // // Peeking And Removing Top Element
-// console.log(heap.peek());
-// console.log(heap.remove());
+console.log(heap.peek());
+console.log(heap.remove());
 
 // // Printing the Heap
 // // After Deletion.
 heap.printHeap();
+
+
+
+console.log(heapSort([57,9,3,4,2,3,13,4,5]))

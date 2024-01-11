@@ -24,7 +24,7 @@ class tree {
 
     }
 
-    insertNode(root, node) {
+        insertNode(root, node) {
         if (root.value > node.value) {
             if (root.left === null) {
                 root.left = node

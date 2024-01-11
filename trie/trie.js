@@ -49,8 +49,13 @@ class trie {
 
             node = node.children.get(char)
         }
-        return true
+        return true     
 
+    }
+    delete(){
+
+        
+    
     }
 }
 
@@ -63,4 +68,4 @@ let trie1 = new trie()
 trie1.insert("apple")
 trie1.insert("amjed")
 trie1.insert("applePhone")
-console.log(trie1.search("amjed"));  Workout
+console.log(trie1.search("amjed"))
